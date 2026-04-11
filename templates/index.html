@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Smart Expense Tracker</title>
+</head>
+<body>
+
+<h2>💰 AI Smart Expense Tracker</h2>
+
+<p>This application helps users track daily expenses and manage money smartly.</p>
+
+<form action="/add" method="post">
+    Amount: <input type="text" name="amount"><br><br>
+    Category: <input type="text" name="category"><br><br>
+    <input type="submit" value="Add Expense">
+</form>
+
+<h3>Expenses:</h3>
+
+{% for item in data %}
+<p>{{item[0]}} - {{item[1]}}</p>
+{% endfor %}
+
+</body>
+</html>
