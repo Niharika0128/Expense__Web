@@ -1,11 +1,9 @@
 from variables import FILE_NAME
 
-# Save data to file
 def save_expense(data):
     with open(FILE_NAME, "a") as file:
         file.write(data + "\n")
 
-# Read data from file
 def read_expense():
     data = []
     try:
@@ -15,3 +13,7 @@ def read_expense():
     except FileNotFoundError:
         pass
     return data
+
+# test
+save_expense("200,Travel")
+print(read_expense())
