@@ -49,3 +49,11 @@
 200,food
 200,food
 100,Food
+100,Food
+100,Food
+200,study
+100,Food
+100,Food
+100,Food
+100,Food
+200,study

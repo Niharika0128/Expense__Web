@@ -12,9 +12,10 @@ def home():
 
 @app.route('/add', methods=['POST'])
 def add():
+    data = []
     amount = request.form['amount']
     category = request.form['category']
-
+    data.append((amount, category))
     if not validate(amount):
         return "Invalid amount"
 
