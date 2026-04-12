@@ -14,6 +14,3 @@ def read_expense():
         pass
     return data
 
-# test
-save_expense("200,Travel")
-print(read_expense())
