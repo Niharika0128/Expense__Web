@@ -5,4 +5,3 @@ def add_expense(amount, category):
     save_expense(data)
     return data
 
-print(add_expense(100, "Food"))

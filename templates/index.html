@@ -10,15 +10,26 @@
 <p>This application helps users track daily expenses and manage money smartly.</p>
 
 <form action="/add" method="post">
-    Amount: <input type="text" name="amount"><br><br>
-    Category: <input type="text" name="category"><br><br>
+    
+    Amount:
+    <input type="text" name="amount" required><br><br>
+
+    Category:
+    <select name="category">
+        <option value="Food">Food</option>
+        <option value="Travel">Travel</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Study">Study</option>
+    </select><br><br>
+
     <input type="submit" value="Add Expense">
 </form>
 
 <h3>Expenses:</h3>
 
 {% for item in data %}
-<p>{{item[0]}} - {{item[1]}}</p>
+    {% set parts = item.split(',') %}
+    <p>{{parts[0]}} - {{parts[1]}}</p>
 {% endfor %}
 
 </body>
